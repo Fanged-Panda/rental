@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const location = searchInput.value;
         if (location) {
             window.location.href = `search_results.html?location=${encodeURIComponent(location)}`;
+            searchInput.value = '';
         }
     };
     
@@ -32,6 +33,25 @@ document.addEventListener('DOMContentLoaded', () => {
         const searchLocationElement = document.getElementById('search-location');
         if (searchLocationElement) {
             searchLocationElement.textContent = location;
+            const navbarSearchInput = document.querySelector('.navbar .search-input');
+            if (navbarSearchInput) {
+                navbarSearchInput.value = location;
+            }
         }
+    }
+
+    const apartmentCards = document.querySelectorAll('.apartment-card');
+    apartmentCards.forEach(card => {
+        card.addEventListener('click', () => {
+            // Optionally, pass apartment ID or data via query string
+            window.location.href = 'apartment_details.html';
+        });
+    });
+
+    const loginBtn = document.querySelector('.login-btn');
+    if (loginBtn) {
+        loginBtn.addEventListener('click', () => {
+            window.location.href = 'login_page.html';
+        });
     }
 });

@@ -9,26 +9,14 @@
 <body>
     <nav class="navbar">
         <div class="logo">MyRentals</div>
-        <input type="checkbox" id="nav-toggle" class="nav-toggle">
-        <label for="nav-toggle" class="nav-toggle-label">
-            <span></span>
-            <span></span>
-            <span></span>
-        </label>
-        <div class="nav-links">
-            <a href="#homes">Homes</a>
-            <a href="#experiences">Experiences</a>
-            <a href="#services">Services</a>
-            <a href="#host" class="host-btn">Become a host</a>
-            <button class="login-btn">Login</button>
+        <div class="search-container">
+            <input type="text" placeholder="Enter your location" class="search-input">
+            <button class="search-btn">Search</button>
         </div>
+        <button class="login-btn">Login</button>
     </nav>
 
     <main class="search-results">
-        <!-- <div class="search-container">
-            <input type="text" placeholder="Enter your location" class="search-input">
-            <button class="search-btn">Search</button>
-        </div> -->
 
         <div class="search-header">
             <h1>Popular homes in <span id="search-location">Chicago, IL</span></h1>
